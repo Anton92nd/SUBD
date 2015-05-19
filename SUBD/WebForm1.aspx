@@ -8,7 +8,13 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
+    <div style="height: 289px">
+    
+		<asp:GridView ID="GridView1" runat="server" DataSourceID="SqlDataSource1">
+		</asp:GridView>
+    	<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:Anton92ndConnectionString %>" SelectCommand="SELECT [name] as [Имя] FROM [exams$] ORDER BY [name]"></asp:SqlDataSource>
+    
+    	<asp:TextBox ID="FilterTextBox" runat="server"></asp:TextBox>
     
     </div>
     </form>
