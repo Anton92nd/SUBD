@@ -12,9 +12,11 @@
     
 		<asp:GridView ID="GridView1" runat="server" DataSourceID="SqlDataSource1">
 		</asp:GridView>
+		<hr/>
     	<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:Anton92ndConnectionString %>" SelectCommand="SELECT [name] as [Имя] FROM [exams$] ORDER BY [name]"></asp:SqlDataSource>
     
     	<asp:TextBox ID="FilterTextBox" runat="server"></asp:TextBox>
+		<asp:Button ID="FilterButton" runat="server" OnClick="FilterButton_Click" Text="Фильтровать" />
     
     </div>
     </form>

@@ -13,5 +13,12 @@ namespace SUBD
 		{
 
 		}
+
+		protected void FilterButton_Click(object sender, EventArgs e)
+		{
+			SqlDataSource1.SelectCommand = string.Format(@"SELECT [name] as [Имя] FROM [exams$]
+WHERE [name] like '{0}%'
+ORDER BY [name]", FilterTextBox.Text);
+		}
 	}
 }
