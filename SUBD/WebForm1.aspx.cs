@@ -11,7 +11,7 @@ namespace SUBD
 	{
 		protected void Page_Load(object sender, EventArgs e)
 		{
-
+			SqlDataSource1.SelectCommand = "SELECT [name] as [Имя] FROM [exams$] ORDER BY [name]";
 		}
 
 		protected void FilterButton_Click(object sender, EventArgs e)
@@ -19,6 +19,11 @@ namespace SUBD
 			SqlDataSource1.SelectCommand = string.Format(@"SELECT [name] as [Имя] FROM [exams$]
 WHERE [name] like '{0}%'
 ORDER BY [name]", FilterTextBox.Text);
+		}
+
+		protected void GridView1_RowEditing(object sender, GridViewEditEventArgs e)
+		{
+
 		}
 	}
 }

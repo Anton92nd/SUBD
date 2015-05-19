@@ -10,7 +10,7 @@
     <form id="form1" runat="server">
     <div style="height: 289px">
     
-		<asp:GridView ID="GridView1" runat="server" DataSourceID="SqlDataSource1">
+		<asp:GridView ID="GridView1" runat="server" DataSourceID="SqlDataSource1" AutoGenerateEditButton="True" OnRowEditing="GridView1_RowEditing">
 		</asp:GridView>
 		<hr/>
     	<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:Anton92ndConnectionString %>" SelectCommand="SELECT [name] as [Имя] FROM [exams$] ORDER BY [name]"></asp:SqlDataSource>
